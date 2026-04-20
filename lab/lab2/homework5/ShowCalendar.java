@@ -5,23 +5,16 @@ import java.util.Scanner;
 public class ShowCalendar {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        
-        // 1. 获取用户输入
         System.out.print("Enter the year and the first day of the year (0=Sun, 1=Mon...): ");
         int year = input.nextInt();       
         int startDay = input.nextInt();   
-
         boolean isLeapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
         int febDays = isLeapYear ? 29 : 28;
+        int currentDay = startDay; 
 
-        int currentDay = startDay; // 用于追踪每个月1号是星期几
-
-        // 3. 循环打印12个月
         for (int month = 1; month <= 12; month++) {
-            
-            // --- 打印月份标题 ---
             String monthName = "";
-            int daysInMonth = 31; // 默认31天
+            int daysInMonth = 31; 
 
             switch (month) {
                 case 1: monthName = "January"; break;
@@ -54,7 +47,7 @@ public class ShowCalendar {
                     System.out.println();
                 }
             }
-            System.out.println(); // 每月结束后换行
+            System.out.println(); 
 
             currentDay = (currentDay + daysInMonth) % 7;
         }
