@@ -1,0 +1,14 @@
+@startuml
+class homework3.Village {
+~ {static} int waterAmount
+- int peopleNumber
+~ String name
+~ {static} void setWaterAmount(int)
+~ void drinkWater(int)
+~ {static} int getWaterAmount()
+~ void setPeopleNumber(int)
+~ int getPeopleNumber()
+}
+
+
+@enduml
