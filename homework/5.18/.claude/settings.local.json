@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(javac *.java)",
+      "Bash(java TestGeometricObjects)",
+      "Bash(java -Dfile.encoding=UTF-8 TestGeometricObjects)"
+    ]
+  }
+}

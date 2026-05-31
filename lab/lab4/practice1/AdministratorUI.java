@@ -5,10 +5,10 @@ import java.util.Scanner;
  */
 public class AdministratorUI {
     private Scanner scanner;
-    private CostomerManger customerManager;
+    private CustomerManager customerManager;
     private Administrator currentAdmin;
 
-    public AdministratorUI(Scanner scanner, CostomerManger customerManager) {
+    public AdministratorUI(Scanner scanner, CustomerManager customerManager) {
         this.scanner = scanner;
         this.customerManager = customerManager;
         this.currentAdmin = null;
@@ -20,16 +20,16 @@ public class AdministratorUI {
      */
     public Administrator handleAdminLogin() {
         System.out.println("\n--- 管理员登录 ---");
-        
+
         System.out.print("请输入管理员账号: ");
         String adminId = scanner.nextLine();
-        
+
         System.out.print("请输入密码: ");
         String password = scanner.nextLine();
-        
+
         // 创建默认管理员进行验证（实际项目中应从配置文件或数据库读取）
         Administrator admin = new Administrator("admin", "123456");
-        
+
         if (admin.loginVerify(adminId, password)) {
             currentAdmin = admin;
             return admin;
@@ -52,7 +52,7 @@ public class AdministratorUI {
             System.out.println("4. 注销");
             System.out.println("********************");
             System.out.print("请输入选项 (1-4): ");
-            
+
             int choice;
             try {
                 choice = Integer.parseInt(scanner.nextLine());
@@ -60,12 +60,12 @@ public class AdministratorUI {
                 System.out.println("无效输入，请输入数字！");
                 continue;
             }
-            
+
             switch (choice) {
                 case 1:
-                    // ✅ 只有管理员能访问客户信息管理
-                    CustomerManageUI customerManageUI = 
-                        new CustomerManageUI(scanner, customerManager);
+                    // 只有管理员能访问客户信息管理
+                    CustomerManageUI customerManageUI =
+                            new CustomerManageUI(scanner, customerManager);
                     customerManageUI.showCustomerManageMenu();
                     break;
                 case 2:
@@ -88,8 +88,8 @@ public class AdministratorUI {
      */
     private void handleOrderManage() {
         System.out.println("\n--- 订单管理 ---");
-        System.out.println("订单管理功能正在开发中...");
-        // TODO: 实现订单查看、统计等功能
+        System.out.println("当前共有 " + customerManager.getCustomerCount() + " 位注册客户。");
+        System.out.println("订单管理功能待完善...");
     }
 
     /**
@@ -97,8 +97,8 @@ public class AdministratorUI {
      */
     private void handleSystemSettings() {
         System.out.println("\n--- 系统设置 ---");
-        System.out.println("系统设置功能正在开发中...");
-        // TODO: 实现系统参数配置等功能
+        System.out.println("当前登录管理员：" + (currentAdmin == null ? "无" : currentAdmin.getAdminId()));
+        System.out.println("系统设置功能待完善...");
     }
 
     /**

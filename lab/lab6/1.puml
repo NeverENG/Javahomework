@@ -1,0 +1,37 @@
+@startuml
+class DangerException {
++ String toShow()
+}
+
+class Machine {
++ void checkBag(Goods)
+}
+
+class Goods {
++ String name
++ boolean isExplorsive
++ boolean isDanger
++ boolean isDanger()
++ boolean isExplorsive()
++ String name()
+}
+
+
+class ExplorDangerException {
++ String toShow()
+}
+
+class ArtificialMachine {
++ void checkBag(Goods)
+}
+
+class practice1 {
++ {static} void main(String[])
+}
+
+
+
+Exception <|-- DangerException
+DangerException <|-- ExplorDangerException
+Machine <|-- ArtificialMachine
+@enduml

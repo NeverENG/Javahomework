@@ -1,0 +1,9 @@
+@startuml
+class ScoreAnalysis {
++ {static} void main(String[])
+- {static} int calcTotal(String)
+- {static} String queryScore(String,String)
+- {static} String parseResult(String)
+}
+
+@enduml

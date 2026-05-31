@@ -1,0 +1,25 @@
+@startuml
+class Circle2D {
+- double x
+- double y
+- double radius
++ double getX()
++ double getY()
++ double getRadius()
++ double getArea()
++ double getPerimeter()
++ boolean contains(double,double)
++ boolean contains(Circle2D)
++ boolean overlaps(Circle2D)
++ boolean isTangent(Circle2D)
++ boolean isCoincident(Circle2D)
++ String getRelation(Circle2D)
+- double distanceTo(Circle2D)
++ String toString()
+}
+
+
+
+
+GeometricObject <|-- Circle2D
+@enduml

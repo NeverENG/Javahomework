@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//e/homework/lab/lab3//**)",
+      "Read(//e/homework/lab/lab5/practice1//**)",
+      "Bash(javac -encoding UTF-8 *.java)",
+      "Bash(java MyShop)",
+      "Bash(java -Dfile.encoding=UTF-8 MyShop)",
+      "Bash(iconv -f UTF-8 -t UTF-8)",
+      "Bash(java PointTest)"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(javac Estimator.java)",
+      "Bash(java -Dfile.encoding=UTF-8 Estimator)",
+      "Bash(javac CheckCarWeight.java)",
+      "Bash(java -Dfile.encoding=UTF-8 CheckCarWeight)",
+      "Bash(chcp.com 65001)",
+      "Bash(java -Dfile.encoding=UTF-8 CheckDogState)",
+      "PowerShell(chcp 65001 *)",
+      "PowerShell(java *)",
+      "Bash(javac -encoding UTF-8 People.java)",
+      "Bash(java People)",
+      "Bash(javac -encoding UTF-8 PerfectSquare.java)",
+      "Bash(java PerfectSquare)",
+      "Bash(javac -encoding UTF-8 RemoveDuplicate.java)",
+      "Bash(java RemoveDuplicate)"
+    ]
+  }
+}

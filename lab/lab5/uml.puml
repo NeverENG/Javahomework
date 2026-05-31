@@ -1,0 +1,37 @@
+@startuml
+class People {
+# double weight
++ void speakHello()
++ void averageHeight()
++ void averageWeight()
++ {static} void main(String[])
+}
+
+
+class ChinaPeople {
++ void speakHello()
++ void averageHeight()
++ void averageWeight()
++ void chinaGongfu()
+}
+
+class AmericanPeople {
++ void speakHello()
++ void averageHeight()
++ void averageWeight()
++ void americanBoxing()
+}
+
+class BeiJingPeople {
++ void speakHello()
++ void averageHeight()
++ void averageWeight()
++ void beijingOpera()
+}
+
+
+
+People <|-- ChinaPeople
+People <|-- AmericanPeople
+ChinaPeople <|-- BeiJingPeople
+@enduml
